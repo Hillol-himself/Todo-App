@@ -1,10 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
+function run() {
+    
     let input = "starting value";
     let tasks = [];
     console.log("Script began\n\n\n");
     let index = -1;
 
-    while(input !== "quit") {
+    while(input !== "quit" && input != null) {
         input = prompt("What do you wanna do mah boi?")
         switch(input) {
             case 'new':
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 break;
             case 'quit':
+            case null:
                 alert("Alright youmma head right out");
                 break;
             default:
@@ -46,4 +48,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     console.log("\n\nEnd of script");
-});
+
+}
